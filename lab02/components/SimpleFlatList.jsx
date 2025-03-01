@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Text,
   StatusBar,
+  Image,
 } from 'react-native';
 import lemon from "../assets/lemon.png";
 import mango from "../assets/mango.png";
@@ -24,15 +25,19 @@ const DATA = [
     { text: "watermelon", icon: lemon },    
 ];
 
-const Item = ({text}) => (
+const Item = ({text, iconSrc}) => (
   <View style={styles.item}>
+    <Image source={iconSrc} style={styles.icon} />
     <Text style={styles.title}>{text}</Text>
   </View>
 );
 
 export default function SimpleFlatList() {
   return (
+    
     <SafeAreaView style={styles.container}>
+      
+      <Text style={styles.title}>App Using FlatListttttt</Text>
       <FlatList
         data={DATA}
         renderItem={({item}) => <Item text={item.text} iconSrc={item.icon}/>}
@@ -48,12 +53,21 @@ const styles = StyleSheet.create({
     marginTop: StatusBar.currentHeight || 0,
     borderWidth: 1
   },
+  title: {
+    // paddingTop: 80,
+    fontSize: 24,
+  },
   item: {
     backgroundColor: '#f9c2ff',
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
   },
+icon: {
+  width: 30,
+  height: 30,
+  marginRight: 10,
+},
   title: {
     fontSize: 32,
   },

@@ -13,11 +13,11 @@ export default function SimpleScrollView() {
     { text: "mango", icon: lemon },
     { text: "456", icon: mango },
     { text: "Mohamed", icon: lemon },
-    { text: "1234", icon: lemon },
-    { text: "lemon", icon: mango },
-    { text: "mango", icon: lemon },
-    { text: "456", icon: mango },
-    { text: "Mohamed", icon: lemon },
+    { text: "12345", icon: lemon },
+    { text: "lemon2", icon: mango },
+    { text: "mango2", icon: lemon },
+    { text: "4567", icon: mango },
+    { text: "Mohamed2", icon: lemon },
   ];
 //   const [arrOfObjects, setArrOfObjects] = useState([]);
 //   useEffect(() => {
@@ -40,7 +40,7 @@ export default function SimpleScrollView() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>First App</Text>
+      <Text style={styles.title}>App Using ScrollView</Text>
       <ScrollView contentContainerStyle={styles.items}>
         {initialValue.map((e) => (
           <Item text={e.text} iconSrc={e.icon} key={e.text} />

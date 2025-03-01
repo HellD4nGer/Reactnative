@@ -2,12 +2,12 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
 export default function Item({ iconSrc, text }) {
   return (
-    // <View style={styles.item}>
+     <View style={styles.item}>
       <TouchableOpacity onPress={() => alert(text)} style={styles.item}>
         <Image source={iconSrc} style={styles.image} />
         <Text style={styles.title}>{text}</Text>
       </TouchableOpacity>
-    // </View>
+     </View>
   );
 }
 
